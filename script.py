@@ -29,7 +29,7 @@ async def send_email():
         message.set_content(f'Уважаемый {first_name, last_name}!\n '
                             f'Спасибо, что пользуетесь нашим сервисом объявлений.')
 
-        await aiosmtplib.send(message, hostname="127.0.0.1", port=8080)
+        await aiosmtplib.send(message, hostname="127.0.0.1", port=1025)
 
 event_loop = asyncio.get_event_loop()
 event_loop.run_until_complete(send_email())
